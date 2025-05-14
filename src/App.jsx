@@ -2,10 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import mobileLegend from './pages/mobileLegend'
+import { useNavigate } from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
-
+  const navigate = useNavigate()
   return (
     <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row">
@@ -19,11 +20,10 @@ function App() {
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
         quasi. In deleniti eaque aut repudiandae et a id nisi.
       </p>
-      <button className="btn btn-primary">Get Started nopal</button>
+      <button className="btn btn-primary" onClick={() => navigate('/mobileLegend')}>Get Started nopal</button>
     </div>
   </div>
 </div>
-      
   )
 }
 
